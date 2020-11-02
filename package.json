@@ -1,0 +1,27 @@
+{
+  "name": "realtime-nodejs-chat-app",
+  "version": "1.0.0",
+  "description": "A Realtime chat application made using NodeJs and socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node server.js",
+    "dev" : "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aditya278/realtime-nodejs-chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aditya278/realtime-nodejs-chat-app/issues"
+  },
+  "homepage": "https://github.com/aditya278/realtime-nodejs-chat-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
