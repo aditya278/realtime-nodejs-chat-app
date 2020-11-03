@@ -17,3 +17,19 @@ app.use(express.static(__dirname + "/public"));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html");
 })
+
+//Socket
+
+const io = require('socket.io')(httpServer);
+
+io.on('connection', (socket) => {
+    console.log('Connected...');
+
+    socket.on('userPayload', (payload) => {
+        socket.broadcast.emit('payloadBroadcast', payload);
+    });
+
+    socket.on('userJoined', (name) => {
+        socket.broadcast.emit('userJoined', name);
+    })
+})
